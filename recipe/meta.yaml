@@ -14,7 +14,7 @@ build:
     - bulk = bulk.__main__:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
