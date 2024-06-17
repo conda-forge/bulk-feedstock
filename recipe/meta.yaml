@@ -11,7 +11,7 @@ source:
 
 build:
   entry_points:
-    - bulk = bulk.__main__:app
+    - bulk = bulk.__main__
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
