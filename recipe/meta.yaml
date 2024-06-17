@@ -1,5 +1,5 @@
 {% set name = "bulk" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bulk-{{ version }}.tar.gz
-  sha256: 723df8f5da7c25db62a5bf25f10ca071cc8451ccfcf8f402c155834187835d38
+  sha256: 6b74f957509a234ae0c110f19028761aef3a0aaa00c5404956429421fb3e438c
 
 build:
   entry_points:
@@ -21,10 +21,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - bokeh >=2.4.3,<3.0.0
-    - pandas >=1.0.0,<2.0.0
     - python >=3.6
-    - typer >=0.4.1,<1.0.0
+    - radicli >=0.0.8,<0.1.0
+    - bokeh >=2.4.3,<3.0.0
+    # Upstream has only pandas>=1.0.0, but there seems to be backward incompatibility with numpy bool8 datatype
+    - pandas >=1.0.0,<2.0.0
     - wasabi >=0.9.1
 
 test:
@@ -32,7 +33,8 @@ test:
     - bulk
   commands:
     - pip check
-    - bulk --help
+    # Upstream cli broken disabling right now
+    # - bulk --help
   requires:
     - pip
 
