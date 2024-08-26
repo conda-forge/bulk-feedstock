@@ -1,5 +1,5 @@
 {% set name = "bulk" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bulk-{{ version }}.tar.gz
-  sha256: 47ca1ddbc84aefc5a4e17ddddc83a76371aba16bf02799220e450fdb7ef2bae9
+  sha256: 2e392dc2cddd75c7fe9b3f0715a062966dc756f4039e1ac2f887c386fc06726b
 
 build:
   entry_points:
