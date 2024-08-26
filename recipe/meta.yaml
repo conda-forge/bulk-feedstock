@@ -20,6 +20,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
   run:
     - python >=3.6
     - radicli >=0.0.8,<0.1.0
@@ -27,6 +28,9 @@ requirements:
     # Upstream has only pandas>=1.0.0, but there seems to be backward incompatibility with numpy bool8 datatype
     - pandas >=1.0.0,<2.0.0
     - wasabi >=0.9.1
+    - numpy <2
+    - jupyter-scatter
+    - scikit-learn
 
 test:
   imports:
